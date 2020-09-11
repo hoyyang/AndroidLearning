@@ -1,0 +1,2 @@
+rootProject.name='MyCamera4'
+include ':app', ':paracamera'

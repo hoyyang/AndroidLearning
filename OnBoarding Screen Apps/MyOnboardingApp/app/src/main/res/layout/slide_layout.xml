@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_page1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/icon1" />
+
+    <TextView
+        android:id="@+id/tv_heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_page1"
+        android:textSize="25dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="HEADING 1" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorTransparentWhiteForText"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_heading1" />
+
+    <TextView
+        android:id="@+id/tv_desc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/v_line"
+        android:textSize="15dp"
+        android:textColor="@color/colorTransparentWhiteForText"
+        android:text="This this description " />
+
+</RelativeLayout>
