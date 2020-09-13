@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +27,7 @@ public class GridFragment extends Fragment {
 
     private GridView gridView;
     private MyOptionGridAdapter myOptionGridAdapter;
+    private Button submitButton;
 
     public GridFragment() {
     }
@@ -44,6 +47,9 @@ public class GridFragment extends Fragment {
         this.showGrid();
         // set SingleButton OnClickListener
         this.setSingleButtonOnClickListener();
+
+        // set submit Button OnClickListener
+        this.setSubmitButtonOnClickListener();
 
         return this.view;
     }
@@ -67,6 +73,7 @@ public class GridFragment extends Fragment {
 
     private void initializeViews() {
         this.gridView = view.findViewById(R.id.grid_view);
+        this.submitButton = view.findViewById(R.id.btn_submit);
     }
 
     private void showGrid() {
@@ -95,6 +102,26 @@ public class GridFragment extends Fragment {
                 rb.setChecked(false);
             }
         }
+    }
+
+    private void setSubmitButtonOnClickListener() {
+        this.submitButton.setOnClickListener(view -> {
+            String optionText = "";
+            for (RadioButton rb : myOptionGridAdapter.getItemRadioButtonList()) {
+                if (rb.isChecked()){
+                    optionText = rb.getText().toString();
+                }
+            }
+            if (optionText.isEmpty()){
+                Toast.makeText(requireContext(), "Please select an answer!", Toast.LENGTH_SHORT).show();
+            } else {
+                for (int i = 0; i < optionList.size(); i++) {
+                    if (optionList.get(i).equals(optionText)){
+                        Toast.makeText(requireContext(), "option no: [" + i + "]", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
 
 }
