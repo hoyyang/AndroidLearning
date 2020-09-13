@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +41,8 @@ public class GridFragment extends Fragment {
 
         // show grid
         this.showGrid();
+        //set Grid Item On Click Listener
+        this.setGridItemOnClickListener();
 
         return this.view;
     }
@@ -65,5 +69,14 @@ public class GridFragment extends Fragment {
     private void showGrid() {
         MyOptionGridAdapter myOptionGridAdapter = new MyOptionGridAdapter(requireContext(), nameList, imageList);
         gridView.setAdapter(myOptionGridAdapter);
+    }
+
+    private void setGridItemOnClickListener() {
+        this.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(requireContext(), "the name is : " + nameList.get(position), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
