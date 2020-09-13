@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,15 +17,15 @@ public class MyOptionGridAdapter extends BaseAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
 
-    private List<String> imageNameList;
+    private List<String> optionList;
     private List<Integer> imagePhotoList;
 
-    private TextView nameTextView;
+//    private TextView optionTextView;
     private ImageView imageView;
 
-    public MyOptionGridAdapter(Context context, List<String> imageNameList, List<Integer> imagePhotoList) {
+    public MyOptionGridAdapter(Context context, List<String> optionList, List<Integer> imagePhotoList) {
         this.context = context;
-        this.imageNameList = imageNameList;
+        this.optionList = optionList;
         this.imagePhotoList = imagePhotoList;
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -50,11 +52,11 @@ public class MyOptionGridAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.grid_item, parent, false);
         }
 
-        nameTextView = convertView.findViewById(R.id.tv_grid_item);
+//        optionTextView = convertView.findViewById(R.id.tv_grid_item);
         imageView = convertView.findViewById(R.id.img_grid_item);
-
-        nameTextView.setText(imageNameList.get(position));
+//        optionTextView.setText(optionList.get(position));
         imageView.setImageResource(imagePhotoList.get(position));
+
 
         return convertView;
     }

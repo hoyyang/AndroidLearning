@@ -20,14 +20,12 @@
             android:adjustViewBounds="false"
             android:src="@drawable/img_g" />
 
-        <TextView
-            android:id="@+id/tv_grid_item"
+        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
             android:layout_below="@+id/img_grid_item"
-            android:textSize="15sp" />
+            android:text="good" />
 
     </RelativeLayout>
 
