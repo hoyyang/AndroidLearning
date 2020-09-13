@@ -49,8 +49,10 @@ public class GridFragment extends Fragment {
         this.nameList.add("name1");
         this.nameList.add("name2");
         this.nameList.add("name3");
+        this.nameList.add("name4");
 
         this.imageList = new ArrayList<>();
+        this.imageList.add(R.drawable.ic_image_black_24dp);
         this.imageList.add(R.drawable.ic_image_black_24dp);
         this.imageList.add(R.drawable.ic_image_black_24dp);
         this.imageList.add(R.drawable.ic_image_black_24dp);
