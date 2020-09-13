@@ -7,10 +7,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+<<<<<<< HEAD
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+=======
+>>>>>>> master
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -46,8 +49,13 @@ public class GridFragment extends Fragment {
 
         // show grid
         this.showGrid();
+<<<<<<< HEAD
         // set SingleButton OnClickListener
         this.setSingleButtonOnClickListener();
+=======
+        //set Grid Item On Click Listener
+        this.setGridItemOnClickListener();
+>>>>>>> master
 
         return this.view;
     }
@@ -78,6 +86,7 @@ public class GridFragment extends Fragment {
         gridView.setAdapter(myOptionGridAdapter);
     }
 
+<<<<<<< HEAD
     private void setSingleButtonOnClickListener() {
         this.myOptionGridAdapter.setOnSingleButtonOnClickListenerClickListener(position -> {
             // set all radio button checked false
@@ -102,4 +111,14 @@ public class GridFragment extends Fragment {
         }
     }
 
+=======
+    private void setGridItemOnClickListener() {
+        this.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(requireContext(), "the name is : " + nameList.get(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+>>>>>>> master
 }
