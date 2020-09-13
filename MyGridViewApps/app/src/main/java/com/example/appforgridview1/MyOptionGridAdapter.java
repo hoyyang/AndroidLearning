@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -14,9 +16,12 @@ public class MyOptionGridAdapter extends BaseAdapter {
     private LayoutInflater layoutInflater;
 
     private List<String> imageNameList;
-    private List<String> imagePhotoList;
+    private List<Integer> imagePhotoList;
 
-    public MyOptionGridAdapter(Context context, List<String> imageNameList, List<String> imagePhotoList) {
+    private TextView nameTextView;
+    private ImageView imageView;
+
+    public MyOptionGridAdapter(Context context, List<String> imageNameList, List<Integer> imagePhotoList) {
         this.context = context;
         this.imageNameList = imageNameList;
         this.imagePhotoList = imagePhotoList;
@@ -45,6 +50,12 @@ public class MyOptionGridAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.grid_item, parent, false);
         }
 
-        return null;
+        nameTextView = convertView.findViewById(R.id.tv_grid_item);
+        imageView = convertView.findViewById(R.id.img_grid_item);
+
+        nameTextView.setText(imageNameList.get(position));
+        imageView.setImageResource(imagePhotoList.get(position));
+
+        return convertView;
     }
 }

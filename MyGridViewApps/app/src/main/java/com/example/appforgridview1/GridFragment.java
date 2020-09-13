@@ -37,6 +37,9 @@ public class GridFragment extends Fragment {
         // initialize Views
         this.initializeViews();
 
+        // show grid
+        this.showGrid();
+
         return this.view;
     }
 
@@ -55,5 +58,10 @@ public class GridFragment extends Fragment {
 
     private void initializeViews() {
         gridView = view.findViewById(R.id.grid_view);
+    }
+
+    private void showGrid() {
+        MyOptionGridAdapter myOptionGridAdapter = new MyOptionGridAdapter(requireContext(), nameList, imageList);
+        gridView.setAdapter(myOptionGridAdapter);
     }
 }
