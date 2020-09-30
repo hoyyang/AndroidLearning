@@ -5,8 +5,8 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.mybottombarapp"
-        minSdkVersion 21
+        applicationId "com.example.virussafeagro"
+        minSdkVersion 25
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -20,7 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
@@ -35,4 +38,7 @@ dependencies {
     // Material Design
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'com.google.android.material:material:1.3.0-alpha02'
+
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

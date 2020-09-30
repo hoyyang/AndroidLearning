@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimaryDark">#074A44</color>
+    <color name="colorPrimaryLight">#0d9488</color>
+    <color name="colorPrimaryDarkBG">#0B0808</color>
+    <color name="colorPrimaryTile">#353437</color>
     <color name="colorAccent">#03DAC5</color>
+    <!--    <color name="colorDarkBackground">#707B7C</color>-->
+    <color name="colorDarkBackground">#515A5A</color>
+
+    <!-- for OnBoarding Screen -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparentWhiteForText">#cccccc</color>
+    <color name="colorGreyForDots">#909497</color>
+    <color name="colorLaunchApp">#C0392B</color>
+
+    <color name="moreTitleLane">#0d9488</color>
+
+    <color name="rightAnswer">#1E8449</color>
+    <color name="rightAnswerLight">#2bb565</color>
+    <color name="wrongAnswer">#C0392B</color>
+    <color name="wrongAnswerLight">#f75443</color>
+    <color name="correctAnswer">#2E86C1</color>
+    <color name="resultItemRightBG">#A9DFBF</color>
+    <color name="resultItemWrongBG">#E6B0AA</color>
+
+    <color name="feedbackBG">#D5D8DC</color>
+    <color name="backButton">#808B96</color>
+
+    <!-- virus detail -->
+    <color name="colorSubTitle">#d0d3d6</color>
+    <color name="btnTopStart">#D5D8DC</color>
+    <color name="btnTopEnd">#D5D8DC</color>
+    <color name="btnQuizStart">#0d9488</color>
+    <color name="btnQuizEnd">#0d9488</color>
+
+    <!-- home -->
+    <color name="tilePressed">#515A5A</color>
+
+    <!-- news -->
+    <color name="author">#d0d3d6</color>
+    <color name="top_line">#808B96</color>
+
+    <!-- search -->
+    <color name="btnOnPress">#909497</color>
+
 </resources>

@@ -1,3 +1,141 @@
 <resources>
-    <string name="app_name">MyBottomBarApp</string>
+    <!--  titles  -->
+    <string name="app_name">bottom bar try</string>
+    <string name="fragment_about">About virusSafe Agro</string>
+    <string name="fragment_calculator">Calculator</string>
+    <string name="fragment_contact_us">Contact Us</string>
+    <string name="fragment_control_strategies">Control Strategies</string>
+    <string name="fragment_disclaimer">Disclaimer</string>
+    <string name="fragment_factor">Factors</string>
+    <string name="fragment_home">Home</string>
+    <string name="fragment_insights">Insights</string>
+    <string name="fragment_learn">Learn</string>
+    <string name="fragment_more">More</string>
+    <string name="fragment_news">Agricultural News in VIC</string>
+    <string name="fragment_news_detail">News Content</string>
+    <string name="fragment_nutrient">Nutrient Deficiencies</string>
+    <string name="fragment_nutrient_detail">Nutrient Details</string>
+    <string name="fragment_tweet">Tweets #Tomato</string>
+    <string name="fragment_updates">Future Updates</string>
+    <string name="fragment_virus_check">Virus Check</string>
+    <string name="fragment_virus_check_result">Virus Check Result</string>
+    <string name="fragment_virus_detail">Virus Details</string>
+    <string name="fragment_virus_info">Virus List</string>
+    <string name="fragment_virus_quiz">Take Quiz</string>
+
+    <!-- for on boarding  -->
+    <string name="button_launch_app">Enter</string>
+    <string name="text_swipe">&lt;&lt; Swipe &gt;&gt;</string>
+
+    <!--  subtitles  -->
+    <string name="fragment_virus_single_choice">Single Choice Questions</string>
+    <string name="fragment_virus_multiple_choice">Multiple Choice Questions</string>
+
+    <!--  subtitles - More  -->
+    <string name="fragment_t1_app_description_more">About virusSafe Phone App</string>
+    <string name="fragment_t2_updates_more">Future Updates</string>
+    <string name="fragment_t3_contact_more">Disclaimer</string>
+    <string name="fragment_t4_disclaimer_more">Contact Us</string>
+    <!--  contents - About App  -->
+    <string name="fragment_c1_app_description_about">
+        Viruses in tomato plants cause humongous damages in Victoria, which results in massive losses. virusSafe Agro aims to inculcate awareness among the farmers at an earlier age by providing an educational platform and ways to mitigate the risk of loss of their cultivation from viruses.
+        \n \nvirusSafe Agro is designed for people who are new to farming and wish to take tomato cultivation as their profession. It serves as an educational platform by providing information about the nine types of viruses in tomato plants, their description, symptoms, causes, prevention strategies. The user also has an option to check his knowledge about the content related to viruses.
+        \n \nThis app offers you a new way of uploading a picture of a tomato plant to check if it is infected or not. On uploading the picture, the user gets instant feedback on whether the plant is infected or not.
+    </string>
+    <string name="fragment_c2_updates_about">The app will contain a feature to check nutrient deficiency in tomato plants and way to tackle it, and revisions based on user feedback.</string>
+    <string name="fragment_c4_contact_about">We are open to feedback about this application.</string>
+    <string name="email_title">E-mail: </string>
+    <string name="our_email">virusSafeAgro@gmail.com</string>
+    <string name="fragment_c3_disclaimer_about">virusSafe Agro does not guarantee the completeness or accuracy of information on this page. virusSafe Agro shall bear no liability or responsibility for any errors, defects, faults or omissions in the information.</string>
+
+    <!--  menu items  -->
+    <string name="menu_ic_home">HOME</string>
+    <string name="menu_ic_learn">LEARN</string>
+    <string name="menu_ic_virus_check">CHECK</string>
+    <string name="menu_ic_calculator">CALCULATOR</string>
+    <string name="menu_ic_more">MORE</string>
+    <string name="menu_ic_toolkit">TOOLKIT</string>
+    <string name="menu_ic_search">SEARCH</string>
+
+    <!-- home -->
+    <string name="text_description_title_home">Welcome to VirusSafe Agro</string>
+    <string name="text_description_content_home">This app aims to provide an easy reference to diagnose virus in tomato plants and a care guide for farmers in Victoria who are new to farming.</string>
+    <string name="text_description_read_more_home">Read More &gt;</string>
+    <string name="text_water_calculator_title_home">Calculate your water usage</string>
+    <string name="text_water_calculator_content_home">Click this calculator to get your estimated spending on water per year.</string>
+    <string name="text_water_calculator_home">Calculate</string>
+    <string name="text_control_home">CONTROL</string>
+    <string name="text_strategies_home">STRATEGIES</string>
+    <string name="text_non_chemical_control_home">Non-chemical Control</string>
+    <string name="text_environmental_condition_home">Environmental Conditions</string>
+    <string name="text_pesticide_home">PESTICIDE</string>
+    <string name="text_stores_home">STORES</string>
+    <string name="text_insights_home">INSIGHTS</string>
+    <string name="text_factors_1_home">FACTORS FOR</string>
+    <string name="text_factors_2_home">VIRUS SPREAD</string>
+    <string name="text_news_home">News</string>
+    <string name="text_tweets_home">Tweets</string>
+    <string name="text_virus_check_home">Check</string>
+    <string name="text_virus_info_home">Learn</string>
+
+    <!-- control strategy -->
+    <string name="text_title_chemical_control">CHEMICAL CONTROL</string>
+    <string name="text_content_chemical_control">Tap on the tile to know about the chemical sprays that can be used to control the virus spread.</string>
+    <string name="text_title_non_chemical_control">NON-CHEMICAL CONTROL</string>
+    <string name="text_content_non_chemical_control">Tap on the tile to know about the organic ways to control the virus spread.</string>
+
+    <!-- factors -->
+    <string name="text_title_cause_factors">TIMING OF CAUSE</string>
+    <string name="text_content_cause_factors">Tap on the tile to read about the causes that gives rise to the spread of virus.</string>
+    <string name="text_title_environmental_conditions_factors">ENVIRONMENTAL CONDITIONS</string>
+    <string name="text_content_environmental_conditions_factors">Tap on the tile to know about the environmental conditions that fuel up the virus spread.</string>
+
+    <!-- insights -->
+    <string name="text_title_news_insights">NEWS</string>
+    <string name="text_content_news_insights">Tap on the tile to know read about the happenings in the agricultural industry.</string>
+    <string name="text_title_tweets_insights">TWEETS</string>
+    <string name="text_content_tweets_insights">Tap on the tile to know read about the tweets posted by people on twitter.</string>
+    <string name="text_title_videos_insights">VIDEOS</string>
+    <string name="text_content_videos_insights">Tap on the tile to watch videos related to agriculture.</string>
+
+    <!-- learn -->
+    <string name="text_title_virus_learn">VIRUS TYPES</string>
+    <string name="text_content_virus_learn">There are 9 types of viruses in tomato plants. Tap on the tile to learn something about them.</string>
+    <string name="text_title_nutrient_learn">NUTRIENT DEFICIENCIES</string>
+    <string name="text_content_nutrient_learn">There are 11 types of nutrient deficiencies in tomato plants. Tap on the tile to read about the nutrient deficiencies in tomato plants.</string>
+
+    <!-- tweet -->
+    <string name="text_site_dot_tweet">\@stockandland&#160;•&#160;</string>
+
+    <!-- virus info list -->
+    <string name="text_description_title_virus_info">Virus disease in tomato plants</string>
+    <string name="text_description_content_virus_info">There are nine types of viruses in tomato plants, which causes major damages to the yield.  Tap on the tiles below to learn more about the viruses.</string>
+
+    <!--  buttons  -->
+    <string name="recycler_view_quiz_button">Take Quiz</string>
+    <string name="recycler_view_content_button">View Content</string>
+    <string name="button_submit_quiz">Submit Your Answer</string>
+    <string name="button_review_quiz">Review Virus Knowledge</string>
+    <string name="button_retake_quiz">Retake Quiz</string>
+    <string name="button_back">Back</string>
+    <string name="button_virus_details_check_result">View Prevention Strategies</string>
+
+    <!--  message  -->
+    <string name="process_bar_text_virus_info">Loading Virus List &#8230;</string>
+    <string name="process_bar_text_virus_quiz">Loading Quiz List and Images &#8230;</string>
+    <string name="process_bar_text_nutrient">Loading Nutrient List &#8230;</string>
+    <string name="process_bar_text_virus_quiz_question">Loading Quiz Images </string>
+    <string name="process_bar_text_news">Loading News List &#8230;</string>
+    <string name="process_bar_text_tweet">Loading Tweets List &#8230;</string>
+    <string name="network_error_text">Network Error</string>
+    <string name="process_bar_text_virus_quiz_result">Loading Quiz Results &#8230;</string>
+    <string name="process_bar_text_virus_check">Analysing the Image &#8230;</string>
+    <string name="text_healthy_virus_check_result">Your tomato is healthy!</string>
+    <string name="text_error_title_virus_check_result">[ Error Message ]:</string>
+    <string name="text_error_virus_check_result">Something wrong with the server! Please try again!</string>
+    <string name="text_ill_virus_check_result">Your tomato is infected by :</string>
+
+
+    <!-- general tool -->
+    <string name="dot_with_space">&#160;•&#160;</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.virussafeagro;
+package com.example.mybottombarapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,32 +25,41 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.mybottombarapp.R;
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     private MainActivity mainActivity = this;
 
     // toolbar
     private Toolbar toolbar;
     // bottom bar
-    private BottomAppBar bottomAppBar;
+//    private BottomNavigationView bottomNavigationView;
+    private BottomNavigationViewEx bottomNavigationViewEx;
+    private FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // initialize Views
         this.initializeViews();
+
+        initEvent();
 
     }
 
     private void initializeViews() {
         this.toolbar = findViewById(R.id.toolbar);
-        this.bottomAppBar = findViewById(R.id.bottom_app_bar);
+        this.bottomNavigationViewEx = findViewById(R.id.bottom_navigation);
+        this.floatingActionButton = findViewById(R.id.fab);
     }
+
 
     @Override
     protected void onResume() {
@@ -58,13 +67,70 @@ public class MainActivity extends AppCompatActivity {
 
         this.displayAllMainActivityViews();
 
+        this.bottom();
     }
+
+    private void bottom() {
+        this.bottomNavigationViewEx.enableItemShiftingMode(false);
+        this.bottomNavigationViewEx.enableShiftingMode(false);
+//        this.bottomNavigationViewEx.setTextVisibility(false);
+        this.bottomNavigationViewEx.setIconSize(30, 30);
+//        this.bottomNavigationViewEx.enableAnimation(false);
+//        this.bottomNavigationViewEx.setIconSizeAt(R.id.ic_virus_check, 150, 150);
+    }
+
+    /**
+     * init BottomNavigationViewEx envent
+     */
+    private void initEvent() {
+        bottomNavigationViewEx.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            private int previousPosition = -1;
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int position = 0;
+                switch (item.getItemId()) {
+//                    case R.id.home:
+//                        position = 0;
+//                        System.out.println("home");
+////                        Toast.makeText(mainActivity, "learn1", Toast.LENGTH_SHORT).show();
+//                        break;
+                    case R.id.ic_learn:
+                        position = 1;
+                        System.out.println("learn");
+//                        Toast.makeText(mainActivity, "learn2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.ic_virus_check:
+                        position = 2;
+//                        Toast.makeText(mainActivity, "learn3", Toast.LENGTH_SHORT).show();
+//                    case R.id.ic_calculator:
+//                        position = 3;
+//                        System.out.println("ca");
+////                        Toast.makeText(mainActivity, "check", Toast.LENGTH_SHORT).show();
+//                        break;
+                    case R.id.ic_toolkit: {
+                        position = 4;
+                        System.out.println("toolkit");
+//                        Toast.makeText(mainActivity, "more", Toast.LENGTH_SHORT).show();
+                    }
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
+
+        floatingActionButton.setOnClickListener(view -> {
+            bottomNavigationViewEx.setCurrentItem(1);
+        });
+    }
+
+
 
     private void displayAllMainActivityViews() {
         // configure toolbar
         this.configureToolbar();
         // initialize bottom navigation bar
-        this.initializeBottomNavigationView();
+//        this.initializeBottomNavigationView();
     }
 
     // add toolbar
@@ -74,22 +140,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     // initialize BottomNavigationView and set OnNavigationItemSelectedListener
-    private void initializeBottomNavigationView(){
+//    private void initializeBottomNavigationView(){
 //        this.bottomNavigationView.setOnNavigationItemSelectedListener(this);
-        this.bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                int id = item.getItemId();
-                // open fragment according to id
-                switchFragments(id);
-                return true;
-            }
-        });
-    }
+//    }
 
 
     private void switchFragments(int itemId) {
 
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        // open fragment according to id
+        this.switchFragments(id);
+
+        return true;
+    }
 }
