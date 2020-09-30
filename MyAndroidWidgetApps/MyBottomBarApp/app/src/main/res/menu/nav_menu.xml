@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/ic_home"-->
+<!--        android:icon="@drawable/ic_home"-->
+<!--        android:title="@string/menu_ic_home" />-->
+
+    <item
+        android:id="@+id/ic_learn"
+        android:icon="@drawable/learn"
+        android:title="@string/menu_ic_learn" />
+
+    <item
+        android:id="@+id/ic_virus_check"
+        android:title="" />
+
+<!--    <item-->
+<!--        android:id="@+id/ic_calculator"-->
+<!--        android:icon="@drawable/calculator"-->
+<!--        android:title="@string/menu_ic_calculator" />-->
+
+    <item
+        android:id="@+id/ic_toolkit"
+        android:icon="@drawable/toolkit"
+        android:title="@string/menu_ic_toolkit" />
+
+</menu>
