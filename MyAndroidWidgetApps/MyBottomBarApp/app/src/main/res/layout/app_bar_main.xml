@@ -23,31 +23,49 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+<<<<<<< HEAD
                 <!-- calculator + more -->
+=======
+>>>>>>> master
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
+<<<<<<< HEAD
+=======
+                    android:layout_marginEnd="10dp"
+>>>>>>> master
                     android:orientation="horizontal">
 
                     <RelativeLayout
                         android:id="@+id/rl_calculator"
+<<<<<<< HEAD
                         android:background="@drawable/ripple_btn_green_bg_toolbar"
                         android:layout_width="60dp"
                         android:layout_height="match_parent">
 
                         <ImageView
                             android:id="@+id/img_calculator"
+=======
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+>>>>>>> master
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
+<<<<<<< HEAD
                             android:tint="@color/color_selector_toolbar"
+=======
+>>>>>>> master
                             android:src="@drawable/calculator"/>
 
                     </RelativeLayout>
 
+<<<<<<< HEAD
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -60,11 +78,21 @@
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/ripple_btn_green_bg_toolbar">
+=======
+                    <RelativeLayout
+                        android:id="@+id/rl_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp">
+>>>>>>> master
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
+<<<<<<< HEAD
                             android:tint="@color/color_selector_toolbar"
+=======
+>>>>>>> master
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:src="@drawable/ic_more_vertical"/>

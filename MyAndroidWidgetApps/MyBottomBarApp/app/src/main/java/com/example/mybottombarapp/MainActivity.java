@@ -42,8 +42,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //    private BottomNavigationView bottomNavigationView;
     private BottomNavigationViewEx bottomNavigationViewEx;
     private FloatingActionButton floatingActionButton;
+<<<<<<< HEAD
     private RelativeLayout calculatorRelativeLayout;
     private RelativeLayout moreRelativeLayout;
+=======
+>>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +64,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         this.toolbar = findViewById(R.id.toolbar);
         this.bottomNavigationViewEx = findViewById(R.id.bottom_navigation);
         this.floatingActionButton = findViewById(R.id.fab);
+<<<<<<< HEAD
         this.calculatorRelativeLayout = findViewById(R.id.rl_calculator);
         this.moreRelativeLayout = findViewById(R.id.rl_more);
+=======
+>>>>>>> master
     }
 
 
@@ -73,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         this.displayAllMainActivityViews();
 
         this.bottom();
+<<<<<<< HEAD
     }
 
     private void bottom() {
@@ -88,6 +95,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
      * init BottomNavigationViewEx envent
      */
     @SuppressLint("ResourceAsColor")
+=======
+    }
+
+    private void bottom() {
+        this.bottomNavigationViewEx.enableItemShiftingMode(false);
+        this.bottomNavigationViewEx.enableShiftingMode(false);
+//        this.bottomNavigationViewEx.setTextVisibility(false);
+        this.bottomNavigationViewEx.setIconSize(30, 30);
+//        this.bottomNavigationViewEx.enableAnimation(false);
+//        this.bottomNavigationViewEx.setIconSizeAt(R.id.ic_virus_check, 150, 150);
+    }
+
+    /**
+     * init BottomNavigationViewEx envent
+     */
+>>>>>>> master
     private void initEvent() {
         bottomNavigationViewEx.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             private int previousPosition = -1;
@@ -128,6 +151,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         floatingActionButton.setOnClickListener(view -> {
             bottomNavigationViewEx.setCurrentItem(1);
         });
+<<<<<<< HEAD
 
         calculatorRelativeLayout.setOnClickListener(v -> {
             v.setActivated(!v.isActivated());
@@ -146,6 +170,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 findViewById(R.id.rl_more).setBackgroundColor(R.color.colorPrimaryDark);
             }
         });
+=======
+>>>>>>> master
     }
 
 
